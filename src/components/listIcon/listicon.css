@@ -80,6 +80,14 @@
     z-index: 1;
   }
 
+  .sidenav{
+    text-align: center;
+    margin-top: 40px;
+    margin-right: 50px;
+    background-color:  grey;
+    border-radius: 20px;
+  }
+
   
 @media (max-width: 900px){
   .hamburger{

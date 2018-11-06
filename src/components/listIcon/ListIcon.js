@@ -9,10 +9,15 @@ class ListIcon extends Component {
             <Link to='/'>Landing</Link>,
             <Link to='/public'>Public</Link>,
             <Link to='/input'>Input</Link>,
-            <Link to="/profile">Profile view</Link>
+            <Link to="/profile">Profile view</Link>,
+            <Link to='/editor'>Editor</Link>
+
         ]
     }
     render() {
+        const redirect = () => {
+            window.location.href = `${process.env.REACT_APP_SERVER}/login`;
+        }
         const { sideNav } = this.state;
         let linkMap = this.state.links.map((link, index) => {
             return <ul key={index}><Link to={link.props.to}>{link.props.children}</Link></ul>
@@ -24,6 +29,7 @@ class ListIcon extends Component {
 
                 <div className="menu">
 
+
                     <div className="main_nav">{linkMap}</div>
                     <div className="hamburger">
                         <div className="hamburger-icon" onClick={() => this.setState({ sideNav: !sideNav })}>
@@ -34,9 +40,15 @@ class ListIcon extends Component {
                         {sideNav && <div className="sidenav">{linkMap}</div>}
 
                     </div>
+
+                </div>
+                <div>
+                    {/* <button onClick={} */}
+                    <button onClick={() => redirect()}>Login</button>
                 </div>
 
             </nav>
+
         )
     }
 }

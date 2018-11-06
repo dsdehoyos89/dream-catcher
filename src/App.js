@@ -11,11 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Link to='/'> Landing </Link>
-        <Link to='/profile'>Profile</Link>
-        <Link to='/public'>Public Dreams</Link>
-        <Link to='/intro'>Intro</Link>
-        <Link to='input'>Input Dreams</Link>
+
         {routes}
 
       </div>
